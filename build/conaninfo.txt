@@ -1,0 +1,36 @@
+[settings]
+    arch=x86_64
+    build_type=Release
+    compiler=apple-clang
+    compiler.libcxx=libc++
+    compiler.version=8.1
+    os=Macos
+
+[requires]
+    VTK/7.Y.Z
+
+[options]
+
+
+[full_settings]
+    arch=x86_64
+    build_type=Release
+    compiler=apple-clang
+    compiler.libcxx=libc++
+    compiler.version=8.1
+    os=Macos
+
+[full_requires]
+    VTK/7.0.0@bilke/stable:7586e5a72612387c5beb630c8ff07f1a397d08b6
+
+[full_options]
+    VTK:shared=False
+
+[scope]
+    dev=True
+
+[recipe_hash]
+
+
+[env]
+
