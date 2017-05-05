@@ -3,8 +3,8 @@ project(four-c-trial)
 
 set(CMAKE_CXX_STANDARD 11)
 
-if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/conanbuildinfo.cmake)
-    include(${CMAKE_CURRENT_SOURCE_DIR}/conanbuildinfo.cmake)
+if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/build/conanbuildinfo.cmake)
+    include(${CMAKE_CURRENT_SOURCE_DIR}/build/conanbuildinfo.cmake)
 else()
     include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 endif()
