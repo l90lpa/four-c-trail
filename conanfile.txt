@@ -1,0 +1,5 @@
+[requires]
+VTK/7.0.0@bilke/stable
+
+[generators]
+cmake
