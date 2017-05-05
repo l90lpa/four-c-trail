@@ -1,5 +1,7 @@
 # four-c-trial
-Set-up of 4 C's toolchain, trialing with VTK library
+Set-up of 4 C's toolchain, trialing with VTK library. Example found at:
+
+http://www.vtk.org/Wiki/VTK/Examples/Cxx/Rendering/Cylinder
 
 ## pull in dependencies
 
