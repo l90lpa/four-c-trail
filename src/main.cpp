@@ -6,7 +6,7 @@
 #include <vtkRenderWindow.h>
 #include <vtkRenderer.h>
 #include <vtkRenderWindowInteractor.h>
- 
+
 int main(int, char *argv[])
 {
   // Create a sphere
@@ -16,7 +16,7 @@ int main(int, char *argv[])
   cylinderSource->SetRadius(5.0);
   cylinderSource->SetHeight(7.0);
   cylinderSource->SetResolution(100);
- 
+
   // Create a mapper and actor
   vtkSmartPointer<vtkPolyDataMapper> mapper =
     vtkSmartPointer<vtkPolyDataMapper>::New();
