@@ -6,6 +6,7 @@ Set-up of 4 C's toolchain, trialing with VTK library
 on terminal:
 
 $ cd ./build
+
 $ conan install --build missing
 
 ## on CLion
@@ -20,11 +21,13 @@ Process finished with exit code 11
 #### Using and CMakeLists.txt of the form below, gives warnings about overrides during the build, but the executable runs fine. Also when using this it was building from VTK that I had pulled in via Homebrew.
 
 cmake_minimum_required(VERSION 3.7)
+
 project(four-c-trial)
 
 set(CMAKE_CXX_STANDARD 11)
 
 find_package(VTK REQUIRED)
+
 include(${VTK_USE_FILE})
 
 add_executable(four-c-trial main.cpp)
