@@ -28,5 +28,6 @@ find_package(VTK REQUIRED)
 include(${VTK_USE_FILE})
 
 add_executable(four-c-trial main.cpp)
+
 target_link_libraries(four-c-trial ${VTK_LIBRARIES})
 
