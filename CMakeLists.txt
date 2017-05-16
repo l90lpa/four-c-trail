@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.7)
 project(four-c-trial)
 
 # Copy conan.cmake file to build folder
@@ -20,8 +20,12 @@ conan_cmake_run(CONANFILE conanfile.txt
         BASIC_SETUP
         BUILD missing)
 
-add_executable(${PROJECT_NAME} src/main.cpp)
-target_link_libraries(${PROJECT_NAME} ${CONAN_LIBS})
+find_package(VTK REQUIRED)
+
+set(SOURCE_FILES src/main.cpp)
+add_executable(${PROJECT_NAME} ${SOURCE_FILES})
+target_link_libraries(${PROJECT_NAME} ${VTK_LIBRARIES} ${CONAN_LIBS})
+
 
 set(CMAKE_CXX_STANDARD 11)
 set_property(DIRECTORY PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME})

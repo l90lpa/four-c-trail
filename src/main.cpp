@@ -1,3 +1,6 @@
+#include "vtkAutoInit.h"
+VTK_MODULE_INIT(vtkRenderingOpenGL2); // VTK was built with vtkRenderingOpenGL2
+VTK_MODULE_INIT(vtkInteractionStyle);
 #include <vtkCylinderSource.h>
 #include <vtkPolyData.h>
 #include <vtkSmartPointer.h>
@@ -24,7 +27,7 @@ int main(int, char *argv[])
   vtkSmartPointer<vtkActor> actor =
     vtkSmartPointer<vtkActor>::New();
   actor->SetMapper(mapper);
- 
+
   //Create a renderer, render window, and interactor
   vtkSmartPointer<vtkRenderer> renderer =
     vtkSmartPointer<vtkRenderer>::New();
@@ -34,15 +37,15 @@ int main(int, char *argv[])
   vtkSmartPointer<vtkRenderWindowInteractor> renderWindowInteractor =
     vtkSmartPointer<vtkRenderWindowInteractor>::New();
   renderWindowInteractor->SetRenderWindow(renderWindow);
- 
+
   // Add the actor to the scene
   renderer->AddActor(actor);
   renderer->SetBackground(.1, .3,.2); // Background color dark green
- 
+
   // Render and interact
   renderWindow->SetWindowName(argv[0]);
   renderWindow->Render();
   renderWindowInteractor->Start();
- 
+
   return EXIT_SUCCESS;
 }

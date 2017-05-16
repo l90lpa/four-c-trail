@@ -3,10 +3,11 @@
 ###
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BUILD_TYPE="Debug"
-printf "== Moving to *build* directory - creating if needed ... "
-mkdir -p $DIR/build
+printf "== Moving to *build* directory - creating if needed ... (cmake-build-debug)"
+mkdir -p $DIR/cmake-build-debug
 printf "OK\n"
-cd $DIR/build
+cd $DIR/cmake-build-debug
+
 
 ###
 printf "== Creating build system\n"
@@ -17,7 +18,6 @@ else
   printf "== FAILED to created build system - Exiting\n"
   exit 1
 fi
-
 
 
 ###
@@ -35,4 +35,3 @@ printf "== Return to child directory ..."
 cd ..
 printf "OK\n"
 exit 0
-
